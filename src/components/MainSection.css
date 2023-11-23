@@ -1,0 +1,110 @@
+.main-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.start-journey-button {
+  font-family: 'Montserrat', sans-serif;
+  width: 400px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background-color: #280f04;
+  border: none;
+  color: #a95410;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.9s ease;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  }
+
+
+.start-journey-button::before,
+.start-journey-button::after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.start-journey-button::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  border-bottom: none;
+  transform: scaleX(0);
+}
+
+.start-journey-button::after {
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: none;
+  transform: scaleX(0);
+}
+
+.start-journey-button:hover::before,
+.start-journey-button:hover::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 1400px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+    .start-journey-button {
+    bottom: 10px;
+    top: auto;
+  }
+}
+
+@media (max-width: 390px) {
+  .main-section {
+    padding: 0px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+  .start-journey-button {
+    width: 200px;
+  }
+}
